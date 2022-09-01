@@ -220,12 +220,12 @@ class Block_Controller(object):
 
         # calc Evaluation Value
         score = 0
-        score = score + fullLines * 10.0           # try to delete line 
-        score = score - nHoles * 1.0               # try not to make hole
-        score = score - nIsolatedBlocks * 1.0      # try not to make isolated block
-        score = score - absDy * 1.0                # try to put block smoothly
+        score = score + fullLines * 40.0           # try to delete line 
+        score = score - nHoles * 30.0               # try not to make hole
+        score = score - nIsolatedBlocks * 40.0      # try not to make isolated block
+        score = score - absDy * 10.0                # try to put block smoothly
         #score = score - maxDy * 0.3                # maxDy
-        #score = score - maxHeight * 5              # maxHeight
+        score = score - maxHeight * 1.5              # maxHeight
         #score = score - stdY * 1.0                 # statistical data
         #score = score - stdDY * 0.01               # statistical data
 
